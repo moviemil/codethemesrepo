@@ -3,5 +3,9 @@
     "api/*.php": {
       "runtime": "vercel-php@0.6.0"
     }
-  }
+  },
+  "routes": [
+    { "src": "/v/(.*?)",  "dest": "/api/index.php?id=$1" },
+    { "src": "/d/(.*?)",  "dest": "/api/index.php?d=$1" }
+  ]
 }
